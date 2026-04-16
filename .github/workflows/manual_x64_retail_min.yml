@@ -1,0 +1,22 @@
+name: Manual x64 retail minimal
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_x64_retail_min:
+    name: Build x64 retail minimal
+    permissions: write-all
+    uses: ./.github/workflows/build.yml
+    with:
+      arch: x64
+      gapps: ""
+      root: none
+      insider: retail
+      magiskver: stable
+      devicemodel: redfin
+      amazonflag: ""
+      compressformat: 7z
+      wsa_ver: "2311"
+      gappsver: none
+    secrets: inherit
